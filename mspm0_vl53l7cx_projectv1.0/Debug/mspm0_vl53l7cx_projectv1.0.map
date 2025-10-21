@@ -1,0 +1,595 @@
+******************************************************************************
+            TI ARM Clang Linker PC v4.0.3                      
+******************************************************************************
+>> Linked Mon Oct 20 23:03:18 2025
+
+OUTPUT FILE NAME:   <mspm0_vl53l7cx_projectv1.0.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00018ff1
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00019248  00006db8  R  X
+  SRAM                  20000000   00004000  000001f3  00003e0d  RW X
+  BCR_CONFIG            41c00000   000000ff  00000000  000000ff  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00019248   00019248    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00015970   00015970    r-- .rodata
+  00015a30    00015a30    000037e8   000037e8    r-x .text
+  00019218    00019218    00000030   00000030    r-- .cinit
+20000000    20000000    000000f3   00000000    rw-
+  20000000    20000000    000000c0   00000000    rw- .bss
+  200000c0    200000c0    00000033   00000000    rw- .data
+20003f00    20003f00    00000100   00000000    rw-
+  20003f00    20003f00    00000100   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0l111x_ticlang.o (.intvecs)
+
+.text      0    00015a30    000037e8     
+                  00015a30    00000920     main.o (.text.main)
+                  00016350    00000880     vl53l7cx_api.o (.text.vl53l7cx_init)
+                  00016bd0    00000868     libc.a : _printfi.c.obj (.text:__TI_printfi_nofloat)
+                  00017438    0000068c     vl53l7cx_api.o (.text.vl53l7cx_get_ranging_data)
+                  00017ac4    00000308     vl53l7cx_api.o (.text.vl53l7cx_start_ranging)
+                  00017dcc    00000224     vl53l7cx_api.o (.text._vl53l7cx_send_offset_data)
+                  00017ff0    000001c4     vl53l7cx_api.o (.text._vl53l7cx_send_xtalk_data)
+                  000181b4    00000168     vl53l7cx_api.o (.text.vl53l7cx_dci_write_data)
+                  0001831c    00000154     vl53l7cx_api.o (.text.vl53l7cx_dci_read_data)
+                  00018470    000000e4     vl53l7cx_api.o (.text.vl53l7cx_set_resolution)
+                  00018554    000000d8     libclang_rt.builtins.a : addsf3.S.obj (.text)
+                  0001862c    000000a4     platform.o (.text.VL53L7CX_SwapBuffer)
+                  000186d0    000000a2     libclang_rt.builtins.a : udivmoddi4.S.obj (.text)
+                  00018772    0000009a     libc.a : memcpy16.S.obj (.text:memcpy)
+                  0001880c    0000008c     libclang_rt.builtins.a : mulsf3.S.obj (.text.__mulsf3)
+                  00018898    00000088     vl53l7cx_uart_if.o (.text.Uart1_Write)
+                  00018920    0000007c     libc.a : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  0001899c    00000074     ti_msp_dl_config.o (.text.SYSCFG_DL_GPIO_init)
+                  00018a10    00000062     libc.a : memset16.S.obj (.text:memset)
+                  00018a72    00000002     startup_mspm0l111x_ticlang.o (.text.Default_Handler)
+                  00018a74    00000060     ti_msp_dl_config.o (.text.SYSCFG_DL_CONFIG_UART_0_init)
+                  00018ad4    00000060     ti_msp_dl_config.o (.text.SYSCFG_DL_CONFIG_UART_1_init)
+                  00018b34    0000005e     vl53l7cx_api.o (.text.vl53l7cx_check_data_ready)
+                  00018b92    00000002     libclang_rt.builtins.a : aeabi_div0.c.obj (.text.__aeabi_idiv0)
+                  00018b94    0000005c     ti_msp_dl_config.o (.text.SYSCFG_DL_CONFIG_I2C_0_init)
+                  00018bf0    00000056     libclang_rt.builtins.a : aeabi_idivmod.S.obj (.text.__aeabi_idivmod)
+                  00018c46    00000002                            : aeabi_div0.c.obj (.text.__aeabi_ldiv0)
+                  00018c48    0000004c     libc.a : snprintf.c.obj (.text.snprintf)
+                  00018c94    00000048     driverlib.a : dl_uart.o (.text.DL_UART_init)
+                  00018cdc    00000048     ti_msp_dl_config.o (.text.SYSCFG_DL_initPower)
+                  00018d24    00000044     vl53l7cx_uart_if.o (.text.Uart0_Print)
+                  00018d68    00000040     libclang_rt.builtins.a : aeabi_uidivmod.S.obj (.text.__aeabi_uidivmod)
+                  00018da8    00000040     libc.a : atoi.c.obj (.text.atoi)
+                  00018de8    0000003c     libclang_rt.builtins.a : floatsisf.S.obj (.text.__floatsisf)
+                  00018e24    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00018e60    0000003a     libclang_rt.builtins.a : muldsi3.S.obj (.text.__muldsi3)
+                  00018e9a    00000002     --HOLE-- [fill = 0]
+                  00018e9c    00000038                            : fixsfsi.S.obj (.text.__fixsfsi)
+                  00018ed4    00000038     vl53l7cx_api.o (.text.vl53l7cx_set_ranging_frequency_hz)
+                  00018f0c    00000034     vl53l7cx_i2c_if.o (.text.VL_I2C_ResetPulse)
+                  00018f40    00000030     driverlib.a : dl_uart.o (.text.DL_UART_transmitDataBlocking)
+                  00018f70    00000030     libc.a : snprintf.c.obj (.text._outs)
+                  00018fa0    00000028     libclang_rt.builtins.a : floatunsisf.S.obj (.text.__floatunsisf)
+                  00018fc8    00000028     libc.a : memmov.c.obj (.text.memmove)
+                  00018ff0    00000028            : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  00019018    00000026     driverlib.a : dl_i2c.o (.text.DL_I2C_setClockConfig)
+                  0001903e    00000002     --HOLE-- [fill = 0]
+                  00019040    00000024     ti_msp_dl_config.o (.text.SYSCFG_DL_SYSCTL_init)
+                  00019064    00000024     libclang_rt.builtins.a : muldi3.S.obj (.text.__muldi3)
+                  00019088    00000022     libc.a : memccpy.c.obj (.text.memccpy)
+                  000190aa    00000002     --HOLE-- [fill = 0]
+                  000190ac    0000001e     libclang_rt.builtins.a : ashldi3.S.obj (.text.__ashldi3)
+                  000190ca    0000001c     ti_msp_dl_config.o (.text.SYSCFG_DL_init)
+                  000190e6    00000018     libc.a : snprintf.c.obj (.text._outc)
+                  000190fe    00000016            : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00019114    00000014     vl53l7cx_i2c_if.o (.text.VL_LowPower)
+                  00019128    00000014     vl53l7cx_i2c_if.o (.text.VL_PowerEnable)
+                  0001913c    00000014     libclang_rt.builtins.a : aeabi_uldivmod.S.obj (.text.__aeabi_uldivmod)
+                  00019150    00000012     driverlib.a : dl_uart.o (.text.DL_UART_setClockConfig)
+                  00019162    00000012     libc.a : copy_decompress_none.c.obj (.text:decompress:none)
+                  00019174    00000010     main.o (.text.SysTick_Handler)
+                  00019184    00000010     vl53l7cx_i2c_if.o (.text.VL_I2C_Init)
+                  00019194    00000010     libc.a : wcslen.c.obj (.text.wcslen)
+                  000191a4    0000000e     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memset)
+                  000191b2    0000000e     libc.a : _printfi.c.obj (.text.strlen)
+                  000191c0    0000000c     libclang_rt.builtins.a : aeabi_memset.S.obj (.text.__aeabi_memclr)
+                  000191cc    0000000a     driverlib.a : dl_common.o (.text.DL_Common_delayCycles)
+                  000191d6    00000002     --HOLE-- [fill = 0]
+                  000191d8    00000008     libc.a : aeabi_portable.c.obj (.text.__aeabi_errno_addr)
+                  000191e0    00000008     libclang_rt.builtins.a : aeabi_memcpy.S.obj (.text.__aeabi_memcpy)
+                  000191e8    00000008                            : aeabi_memmove.S.obj (.text.__aeabi_memmove)
+                  000191f0    00000006     libc.a : exit.c.obj (.text:abort)
+                  000191f6    00000004     libsysbm.a : hostexit.c.obj (.text.HOSTexit)
+                  000191fa    00000004     startup_mspm0l111x_ticlang.o (.text.Reset_Handler)
+                  000191fe    00000004     platform.o (.text.VL53L7CX_RdByte)
+                  00019202    00000004     platform.o (.text.VL53L7CX_RdMulti)
+                  00019206    00000004     platform.o (.text.VL53L7CX_WaitMs)
+                  0001920a    00000004     platform.o (.text.VL53L7CX_WrByte)
+                  0001920e    00000004     platform.o (.text.VL53L7CX_WrMulti)
+                  00019212    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00019216    00000002     --HOLE-- [fill = 0]
+
+.cinit     0    00019218    00000030     
+                  00019218    0000000c     (__TI_handler_table)
+                  00019224    0000000a     (.cinit..data.load) [load image, compression = lzss]
+                  0001922e    00000002     --HOLE-- [fill = 0]
+                  00019230    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00019238    00000010     (__TI_cinit_table)
+
+.rodata    0    000000c0    00015970     
+                  000000c0    00015000     vl53l7cx_api.o (.rodata.VL53L7CX_FIRMWARE)
+                  000150c0    000003cc     vl53l7cx_api.o (.rodata.VL53L7CX_DEFAULT_CONFIGURATION)
+                  0001548c    00000308     vl53l7cx_api.o (.rodata.VL53L7CX_DEFAULT_XTALK)
+                  00015794    0000000a     ti_msp_dl_config.o (.rodata.gCONFIG_UART_0Config)
+                  0001579e    00000002     ti_msp_dl_config.o (.rodata.gCONFIG_I2C_0ClockConfig)
+                  000157a0    00000101     libc.a : aeabi_ctype.S.obj (.rodata:__aeabi_ctype_table_)
+                  000158a1    00000059     main.o (.rodata.str1.15159059442110792349.1)
+                  000158fa    00000040     main.o (.rodata.str1.17100691992556644108.1)
+                  0001593a    0000003e     main.o (.rodata.str1.18227636981041470289.1)
+                  00015978    00000030     vl53l7cx_api.o (.rodata..L__const.vl53l7cx_start_ranging.output)
+                  000159a8    00000028     vl53l7cx_api.o (.rodata.VL53L7CX_GET_NVM_CMD)
+                  000159d0    00000017     main.o (.rodata.str1.288608917962107522.1)
+                  000159e7    00000012     main.o (.rodata.str1.8154729771448623357.1)
+                  000159f9    00000011     libc.a : _printfi.c.obj (.rodata.str1.10348868589481759720.1)
+                  00015a0a    00000011            : _printfi.c.obj (.rodata.str1.15363888844622738466.1)
+                  00015a1b    00000001     main.o (.rodata.str1.12180500075719773345.1)
+                  00015a1c    0000000a     ti_msp_dl_config.o (.rodata.gCONFIG_UART_1Config)
+                  00015a26    00000003     main.o (.rodata.str1.14112174005742061988.1)
+                  00015a29    00000002     ti_msp_dl_config.o (.rodata.gCONFIG_UART_0ClockConfig)
+                  00015a2b    00000002     ti_msp_dl_config.o (.rodata.gCONFIG_UART_1ClockConfig)
+                  00015a2d    00000002     main.o (.rodata.str1.2846389346932560359.1)
+                  00015a2f    00000001     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.bss       0    20000000    000000c0     UNINITIALIZED
+                  20000000    00000080     main.o (.bss.baseline)
+                  20000080    00000040     main.o (.bss.base_valid)
+
+.data      0    200000c0    00000033     UNINITIALIZED
+                  200000c0    0000000c     main.o (.data.zoneDwellMs)
+                  200000cc    0000000c     main.o (.data.zoneFirstEntryMs)
+                  200000d8    00000004     libc.a : aeabi_portable.c.obj (.data.__aeabi_errno)
+                  200000dc    00000004     main.o (.data.g_ms)
+                  200000e0    00000004     main.o (.data.lastFrameMs)
+                  200000e4    00000004     main.o (.data.lastSeenMs)
+                  200000e8    00000004     main.o (.data.sessionStartMs)
+                  200000ec    00000003     main.o (.data.zoneEntered)
+                  200000ef    00000001     main.o (.data.base_frames)
+                  200000f0    00000001     main.o (.data.baseline_ready)
+                  200000f1    00000001     main.o (.data.curZone)
+                  200000f2    00000001     main.o (.data.sessionActive)
+
+.stack     0    20003f00    00000100     UNINITIALIZED
+                  20003f00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20003f04    000000fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code    ro data   rw data
+       ------                         ----    -------   -------
+    .\
+       ti_msp_dl_config.o             536     26        0      
+       startup_mspm0l111x_ticlang.o   6       192       0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         542     218       0      
+                                                               
+    .\VL53L7CX_ULD\api\
+       vl53l7cx_api.o                 6706    87852     0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         6706    87852     0      
+                                                               
+    .\VL53L7CX_ULD\platform\
+       platform.o                     184     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         184     0         0      
+                                                               
+    .\source\
+       main.o                         2352    262       239    
+       vl53l7cx_uart_if.o             204     0         0      
+       vl53l7cx_i2c_if.o              108     0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         2664    262       239    
+                                                               
+    C:/ti/mspm0_sdk_2_07_00_05/source/ti/driverlib/lib/ticlang/m0p/mspm0l111x/driverlib.a
+       dl_uart.o                      138     0         0      
+       dl_i2c.o                       38      0         0      
+       dl_common.o                    10      0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         186     0         0      
+                                                               
+    C:\ti\ccs2020\ccs\tools\compiler\ti-cgt-armllvm_4.0.3.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       _printfi.c.obj                 2166    34        0      
+       aeabi_ctype.S.obj              0       257       0      
+       memcpy16.S.obj                 154     0         0      
+       snprintf.c.obj                 148     0         0      
+       copy_decompress_lzss.c.obj     124     0         0      
+       memset16.S.obj                 98      0         0      
+       atoi.c.obj                     64      0         0      
+       autoinit.c.obj                 60      0         0      
+       boot_cortex_m.c.obj            40      0         0      
+       memmov.c.obj                   40      0         0      
+       memccpy.c.obj                  34      0         0      
+       copy_zero_init.c.obj           22      0         0      
+       copy_decompress_none.c.obj     18      0         0      
+       wcslen.c.obj                   16      0         0      
+       aeabi_portable.c.obj           8       0         4      
+       exit.c.obj                     6       0         0      
+       pre_init.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         3002    291       4      
+                                                               
+    C:\ti\ccs2020\ccs\tools\compiler\ti-cgt-armllvm_4.0.3.LTS\lib\armv6m-ti-none-eabi/c/libsysbm.a
+       hostexit.c.obj                 4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         4       0         0      
+                                                               
+    C:\ti\ccs2020\ccs\tools\compiler\ti-cgt-armllvm_4.0.3.LTS\lib\armv6m-ti-none-eabi/libclang_rt.builtins.a
+       addsf3.S.obj                   216     0         0      
+       udivmoddi4.S.obj               162     0         0      
+       mulsf3.S.obj                   140     0         0      
+       aeabi_idivmod.S.obj            86      0         0      
+       aeabi_uidivmod.S.obj           64      0         0      
+       floatsisf.S.obj                60      0         0      
+       muldsi3.S.obj                  58      0         0      
+       fixsfsi.S.obj                  56      0         0      
+       floatunsisf.S.obj              40      0         0      
+       muldi3.S.obj                   36      0         0      
+       ashldi3.S.obj                  30      0         0      
+       aeabi_memset.S.obj             26      0         0      
+       aeabi_uldivmod.S.obj           20      0         0      
+       aeabi_memcpy.S.obj             8       0         0      
+       aeabi_memmove.S.obj            8       0         0      
+       aeabi_div0.c.obj               4       0         0      
+    +--+------------------------------+-------+---------+---------+
+       Total:                         1014    0         0      
+                                                               
+       Stack:                         0       0         256    
+       Linker Generated:              0       46        0      
+    +--+------------------------------+-------+---------+---------+
+       Grand Total:                   14302   88669     499    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00019238 records: 2, size/record: 8, table size: 16
+	.data: load addr=00019224, load size=0000000a bytes, run addr=200000c0, run size=00000033 bytes, compression=lzss
+	.bss: load addr=00019230, load size=00000008 bytes, run addr=20000000, run size=000000c0 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00019218 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                             
+-------   ----                             
+00018a73  ADC0_IRQHandler                  
+00018a73  AESADV_IRQHandler                
+000191f6  C$$EXIT                          
+000191cd  DL_Common_delayCycles            
+00019019  DL_I2C_setClockConfig            
+00018c95  DL_UART_init                     
+00019151  DL_UART_setClockConfig           
+00018f41  DL_UART_transmitDataBlocking     
+00018a73  DMA_IRQHandler                   
+00018a73  Default_Handler                  
+00018a73  GROUP0_IRQHandler                
+00018a73  GROUP1_IRQHandler                
+000191f7  HOSTexit                         
+00018a73  HardFault_Handler                
+00018a73  I2C0_IRQHandler                  
+00018a73  LFSS_IRQHandler                  
+00018a73  NMI_Handler                      
+00018a73  PendSV_Handler                   
+000191fb  Reset_Handler                    
+00018a73  SPI0_IRQHandler                  
+00018a73  SVC_Handler                      
+00018b95  SYSCFG_DL_CONFIG_I2C_0_init      
+00018a75  SYSCFG_DL_CONFIG_UART_0_init     
+00018ad5  SYSCFG_DL_CONFIG_UART_1_init     
+0001899d  SYSCFG_DL_GPIO_init              
+00019041  SYSCFG_DL_SYSCTL_init            
+000190cb  SYSCFG_DL_init                   
+00018cdd  SYSCFG_DL_initPower              
+00019175  SysTick_Handler                  
+00018a73  TIMA0_IRQHandler                 
+00018a73  TIMG0_IRQHandler                 
+00018a73  TIMG1_IRQHandler                 
+00018a73  TIMG8_IRQHandler                 
+00018a73  UART0_IRQHandler                 
+00018a73  UART1_IRQHandler                 
+00018d25  Uart0_Print                      
+00018899  Uart1_Write                      
+000150c0  VL53L7CX_DEFAULT_CONFIGURATION   
+0001548c  VL53L7CX_DEFAULT_XTALK           
+000000c0  VL53L7CX_FIRMWARE                
+000159a8  VL53L7CX_GET_NVM_CMD             
+000191ff  VL53L7CX_RdByte                  
+00019203  VL53L7CX_RdMulti                 
+0001862d  VL53L7CX_SwapBuffer              
+00019207  VL53L7CX_WaitMs                  
+0001920b  VL53L7CX_WrByte                  
+0001920f  VL53L7CX_WrMulti                 
+00019185  VL_I2C_Init                      
+00018f0d  VL_I2C_ResetPulse                
+00019115  VL_LowPower                      
+00019129  VL_PowerEnable                   
+20004000  __STACK_END                      
+00000100  __STACK_SIZE                     
+00000000  __TI_ATRegion0_region_sz         
+00000000  __TI_ATRegion0_src_addr          
+00000000  __TI_ATRegion0_trg_addr          
+00000000  __TI_ATRegion1_region_sz         
+00000000  __TI_ATRegion1_src_addr          
+00000000  __TI_ATRegion1_trg_addr          
+00000000  __TI_ATRegion2_region_sz         
+00000000  __TI_ATRegion2_src_addr          
+00000000  __TI_ATRegion2_trg_addr          
+00019238  __TI_CINIT_Base                  
+00019248  __TI_CINIT_Limit                 
+00019248  __TI_CINIT_Warm                  
+00019218  __TI_Handler_Table_Base          
+00019224  __TI_Handler_Table_Limit         
+00018e25  __TI_auto_init_nobinit_nopinit   
+00018921  __TI_decompress_lzss             
+00019163  __TI_decompress_none             
+ffffffff  __TI_pprof_out_hndl              
+00016bd1  __TI_printfi_nofloat             
+ffffffff  __TI_prof_data_size              
+ffffffff  __TI_prof_data_start             
+00000000  __TI_static_base__               
+000190ff  __TI_zero_init_nomemset          
+0001855f  __addsf3                         
+000157a0  __aeabi_ctype_table_             
+000157a0  __aeabi_ctype_table_C            
+200000d8  __aeabi_errno                    
+000191d9  __aeabi_errno_addr               
+00018e9d  __aeabi_f2iz                     
+0001855f  __aeabi_fadd                     
+0001880d  __aeabi_fmul                     
+00018555  __aeabi_fsub                     
+00018de9  __aeabi_i2f                      
+00018bf1  __aeabi_idiv                     
+00018b93  __aeabi_idiv0                    
+00018bf1  __aeabi_idivmod                  
+00018c47  __aeabi_ldiv0                    
+000190ad  __aeabi_llsl                     
+00019065  __aeabi_lmul                     
+000191c1  __aeabi_memclr                   
+000191c1  __aeabi_memclr4                  
+000191c1  __aeabi_memclr8                  
+000191e1  __aeabi_memcpy                   
+000191e1  __aeabi_memcpy4                  
+000191e1  __aeabi_memcpy8                  
+000191e9  __aeabi_memmove                  
+000191e9  __aeabi_memmove4                 
+000191e9  __aeabi_memmove8                 
+000191a5  __aeabi_memset                   
+000191a5  __aeabi_memset4                  
+000191a5  __aeabi_memset8                  
+00018fa1  __aeabi_ui2f                     
+00018d69  __aeabi_uidiv                    
+00018d69  __aeabi_uidivmod                 
+0001913d  __aeabi_uldivmod                 
+000190ad  __ashldi3                        
+ffffffff  __binit__                        
+00018e9d  __fixsfsi                        
+00018de9  __floatsisf                      
+00018fa1  __floatunsisf                    
+UNDEFED   __mpu_init                       
+00019065  __muldi3                         
+00018e61  __muldsi3                        
+0001880d  __mulsf3                         
+20003f00  __stack                          
+20000000  __start___llvm_prf_bits          
+20000000  __start___llvm_prf_cnts          
+20000000  __stop___llvm_prf_bits           
+20000000  __stop___llvm_prf_cnts           
+00018555  __subsf3                         
+000186d1  __udivmoddi4                     
+00018ff1  _c_int00_noargs                  
+UNDEFED   _system_post_cinit               
+00019213  _system_pre_init                 
+000191f1  abort                            
+00018da9  atoi                             
+ffffffff  binit                            
+00000000  interruptVectors                 
+00015a31  main                             
+00019089  memccpy                          
+00018773  memcpy                           
+00018fc9  memmove                          
+00018a11  memset                           
+00018c49  snprintf                         
+00018b35  vl53l7cx_check_data_ready        
+0001831d  vl53l7cx_dci_read_data           
+000181b5  vl53l7cx_dci_write_data          
+00017439  vl53l7cx_get_ranging_data        
+00016351  vl53l7cx_init                    
+00018ed5  vl53l7cx_set_ranging_frequency_hz
+00018471  vl53l7cx_set_resolution          
+00017ac5  vl53l7cx_start_ranging           
+00019195  wcslen                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                             
+-------   ----                             
+00000000  __TI_ATRegion0_region_sz         
+00000000  __TI_ATRegion0_src_addr          
+00000000  __TI_ATRegion0_trg_addr          
+00000000  __TI_ATRegion1_region_sz         
+00000000  __TI_ATRegion1_src_addr          
+00000000  __TI_ATRegion1_trg_addr          
+00000000  __TI_ATRegion2_region_sz         
+00000000  __TI_ATRegion2_src_addr          
+00000000  __TI_ATRegion2_trg_addr          
+00000000  __TI_static_base__               
+00000000  interruptVectors                 
+000000c0  VL53L7CX_FIRMWARE                
+00000100  __STACK_SIZE                     
+000150c0  VL53L7CX_DEFAULT_CONFIGURATION   
+0001548c  VL53L7CX_DEFAULT_XTALK           
+000157a0  __aeabi_ctype_table_             
+000157a0  __aeabi_ctype_table_C            
+000159a8  VL53L7CX_GET_NVM_CMD             
+00015a31  main                             
+00016351  vl53l7cx_init                    
+00016bd1  __TI_printfi_nofloat             
+00017439  vl53l7cx_get_ranging_data        
+00017ac5  vl53l7cx_start_ranging           
+000181b5  vl53l7cx_dci_write_data          
+0001831d  vl53l7cx_dci_read_data           
+00018471  vl53l7cx_set_resolution          
+00018555  __aeabi_fsub                     
+00018555  __subsf3                         
+0001855f  __addsf3                         
+0001855f  __aeabi_fadd                     
+0001862d  VL53L7CX_SwapBuffer              
+000186d1  __udivmoddi4                     
+00018773  memcpy                           
+0001880d  __aeabi_fmul                     
+0001880d  __mulsf3                         
+00018899  Uart1_Write                      
+00018921  __TI_decompress_lzss             
+0001899d  SYSCFG_DL_GPIO_init              
+00018a11  memset                           
+00018a73  ADC0_IRQHandler                  
+00018a73  AESADV_IRQHandler                
+00018a73  DMA_IRQHandler                   
+00018a73  Default_Handler                  
+00018a73  GROUP0_IRQHandler                
+00018a73  GROUP1_IRQHandler                
+00018a73  HardFault_Handler                
+00018a73  I2C0_IRQHandler                  
+00018a73  LFSS_IRQHandler                  
+00018a73  NMI_Handler                      
+00018a73  PendSV_Handler                   
+00018a73  SPI0_IRQHandler                  
+00018a73  SVC_Handler                      
+00018a73  TIMA0_IRQHandler                 
+00018a73  TIMG0_IRQHandler                 
+00018a73  TIMG1_IRQHandler                 
+00018a73  TIMG8_IRQHandler                 
+00018a73  UART0_IRQHandler                 
+00018a73  UART1_IRQHandler                 
+00018a75  SYSCFG_DL_CONFIG_UART_0_init     
+00018ad5  SYSCFG_DL_CONFIG_UART_1_init     
+00018b35  vl53l7cx_check_data_ready        
+00018b93  __aeabi_idiv0                    
+00018b95  SYSCFG_DL_CONFIG_I2C_0_init      
+00018bf1  __aeabi_idiv                     
+00018bf1  __aeabi_idivmod                  
+00018c47  __aeabi_ldiv0                    
+00018c49  snprintf                         
+00018c95  DL_UART_init                     
+00018cdd  SYSCFG_DL_initPower              
+00018d25  Uart0_Print                      
+00018d69  __aeabi_uidiv                    
+00018d69  __aeabi_uidivmod                 
+00018da9  atoi                             
+00018de9  __aeabi_i2f                      
+00018de9  __floatsisf                      
+00018e25  __TI_auto_init_nobinit_nopinit   
+00018e61  __muldsi3                        
+00018e9d  __aeabi_f2iz                     
+00018e9d  __fixsfsi                        
+00018ed5  vl53l7cx_set_ranging_frequency_hz
+00018f0d  VL_I2C_ResetPulse                
+00018f41  DL_UART_transmitDataBlocking     
+00018fa1  __aeabi_ui2f                     
+00018fa1  __floatunsisf                    
+00018fc9  memmove                          
+00018ff1  _c_int00_noargs                  
+00019019  DL_I2C_setClockConfig            
+00019041  SYSCFG_DL_SYSCTL_init            
+00019065  __aeabi_lmul                     
+00019065  __muldi3                         
+00019089  memccpy                          
+000190ad  __aeabi_llsl                     
+000190ad  __ashldi3                        
+000190cb  SYSCFG_DL_init                   
+000190ff  __TI_zero_init_nomemset          
+00019115  VL_LowPower                      
+00019129  VL_PowerEnable                   
+0001913d  __aeabi_uldivmod                 
+00019151  DL_UART_setClockConfig           
+00019163  __TI_decompress_none             
+00019175  SysTick_Handler                  
+00019185  VL_I2C_Init                      
+00019195  wcslen                           
+000191a5  __aeabi_memset                   
+000191a5  __aeabi_memset4                  
+000191a5  __aeabi_memset8                  
+000191c1  __aeabi_memclr                   
+000191c1  __aeabi_memclr4                  
+000191c1  __aeabi_memclr8                  
+000191cd  DL_Common_delayCycles            
+000191d9  __aeabi_errno_addr               
+000191e1  __aeabi_memcpy                   
+000191e1  __aeabi_memcpy4                  
+000191e1  __aeabi_memcpy8                  
+000191e9  __aeabi_memmove                  
+000191e9  __aeabi_memmove4                 
+000191e9  __aeabi_memmove8                 
+000191f1  abort                            
+000191f6  C$$EXIT                          
+000191f7  HOSTexit                         
+000191fb  Reset_Handler                    
+000191ff  VL53L7CX_RdByte                  
+00019203  VL53L7CX_RdMulti                 
+00019207  VL53L7CX_WaitMs                  
+0001920b  VL53L7CX_WrByte                  
+0001920f  VL53L7CX_WrMulti                 
+00019213  _system_pre_init                 
+00019218  __TI_Handler_Table_Base          
+00019224  __TI_Handler_Table_Limit         
+00019238  __TI_CINIT_Base                  
+00019248  __TI_CINIT_Limit                 
+00019248  __TI_CINIT_Warm                  
+20000000  __start___llvm_prf_bits          
+20000000  __start___llvm_prf_cnts          
+20000000  __stop___llvm_prf_bits           
+20000000  __stop___llvm_prf_cnts           
+200000d8  __aeabi_errno                    
+20003f00  __stack                          
+20004000  __STACK_END                      
+ffffffff  __TI_pprof_out_hndl              
+ffffffff  __TI_prof_data_size              
+ffffffff  __TI_prof_data_start             
+ffffffff  __binit__                        
+ffffffff  binit                            
+UNDEFED   __mpu_init                       
+UNDEFED   _system_post_cinit               
+
+[146 symbols]
