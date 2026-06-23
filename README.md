@@ -6,7 +6,7 @@ Presence, motion tracking and session analytics using the Texas Instruments MSPM
 
 ## Overview
 
-This project implements low-power presence detection and motion tracking using the VL53L7CX ToF sensor. The firmware performs foreground extraction, blob clustering, zone tracking and session generation directly on the MSPM0L1117 MCU.
+This project implements presence detection and motion tracking using the VL53L7CX ToF sensor. The firmware performs foreground extraction, blob clustering, zone tracking and session generation directly on the MSPM0L1117 MCU.
 
 Detected sessions are exported as JSON records over UART for further processing by an external host MCU or cloud gateway.
 
