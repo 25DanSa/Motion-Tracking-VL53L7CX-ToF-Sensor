@@ -1,6 +1,6 @@
-# MSPM0L1117 + VL53L7CX Presence Tracker
+# MSPM0L1117 + VL53L7CX Presence & Motion Tracker
 
-Presence tracking and session analytics using the Texas Instruments MSPM0L1117 MCU and ST VL53L7CX Time-of-Flight sensor.
+Presence, motion tracking and session analytics using the Texas Instruments MSPM0L1117 MCU and ST VL53L7CX Time-of-Flight sensor.
 
 ## Features
 
