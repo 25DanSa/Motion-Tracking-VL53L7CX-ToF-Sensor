@@ -81,7 +81,7 @@ VL53L7CX_ULD/
 
 ## Known Limitations
 
-- Performance depends on integration time and ranging frequency. Low power config: 3Hz,  40ms integration time, sys clk 4Mhz
+- Ranging up to 2.20m. Performance depends on integration time and ranging frequency. Low power config: 3Hz,  40ms integration time, sys clk 4Mhz
 
 ## License
 
