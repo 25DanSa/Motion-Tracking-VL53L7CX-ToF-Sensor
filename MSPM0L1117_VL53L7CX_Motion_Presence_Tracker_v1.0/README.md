@@ -1,22 +1,77 @@
-## Example Summary
+# MSPM0L1117 + VL53L7CX Presence & Motion Tracker
 
-Empty project using DriverLib.
-This example shows a basic empty project using DriverLib with just main file
-and SysConfig initialization.
+Presence, motion tracking and session analytics using the Texas Instruments MSPM0L1117 MCU and ST VL53L7CX Time-of-Flight sensor.
 
-## Peripherals, Pin Functions, MCU Pins, Launchpad Pins
-| Peripheral | Function | MCU Pin | Launchpad Pin | Launchpad Settings |
-| --- | --- | --- | --- | --- |
-| SYSCTL |  |  |  |  |
-| BOARD | Debug Clock | PA20 | J22_16 |  |
-| BOARD | Debug Data In Out | PA19 | J22_14 |  |
+## Features
 
+- VL53L7CX 4x4 ranging mode
+- Motion-gated presence detection
+- Blob clustering
+- 3-zone tracking
+- Dwell time measurement
+- Session generation
+- UART JSON output
+- Ring buffer storage
+- Time synchronization support
+- Low-power MSPM0 implementation
 
-### Device Migration Recommendations
-This project was developed for a superset device included in the LP_MSPM0L1117 LaunchPad. Please
-visit the [CCS User's Guide](https://software-dl.ti.com/msp430/esd/MSPM0-SDK/latest/docs/english/tools/ccs_ide_guide/doc_guide/doc_guide-srcs/ccs_ide_guide.html#non-sysconfig-compatible-project-migration)
-for information about migrating to other MSPM0 devices.
+## Hardware
 
-## Example Usage
+### MCU
+- MSPM0L1117
 
-Compile, load and run the example.
+### Sensor
+- VL53L7CX
+
+### Communication
+- I2C Sensor<>MCU, MCU UART JSON output
+
+## Zone Layout
+
+| Zone | Distance |
+|--------|--------|
+| Z1 | 0-0.75m |
+| Z2 | 0.75-1.5m |
+| Z3 | 1.5-2.2m |
+
+## Session Output
+
+Example:
+
+```json
+{
+  "event":"session_end",
+  "total_ms":4123,
+  "final_zone":2,
+  "zones":[
+    {
+      "idx":1,
+      "dwell_ms":1000
+    },
+    {
+      "idx":2,
+      "dwell_ms":3123
+    }
+  ]
+}
+```
+
+## Build Environment
+
+- Code Composer Studio
+- MSPM0 SDK
+- VL53L7CX ULD
+
+## Project Structure
+
+source/
+include/
+VL53L7CX_ULD/
+
+## Known Limitations
+
+- Performance depends on integration time and ranging frequency. Low power config: 3Hz,  40ms integration time, sys clk 4Mhz
+
+## License
+
+Vusion
