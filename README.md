@@ -38,6 +38,7 @@ Presence, motion tracking and session analytics using the Texas Instruments MSPM
 
 Example:
 
+```json
 {
   "event": "session_end",
   "total_ms": 2945,
@@ -64,6 +65,7 @@ Example:
   ],
   "conversionEvent": 0
 }
+```
 
 ## Build Environment
 
