@@ -1,0 +1,23 @@
+# CCS build output
+Debug/
+Release/
+
+# Eclipse / CCS
+.settings/
+
+# Clang cache
+.clangd/
+
+# Generated objects
+*.o
+*.d
+*.map
+*.out
+*.obj
+
+# Linker outputs
+*_linkInfo.xml
+
+# OS
+.DS_Store
+Thumbs.db
