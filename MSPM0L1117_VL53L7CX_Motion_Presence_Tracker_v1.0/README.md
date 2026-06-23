@@ -40,19 +40,30 @@ Example:
 
 ```json
 {
-  "event":"session_end",
-  "total_ms":4123,
-  "final_zone":2,
-  "zones":[
+  "event": "session_end",
+  "total_ms": 2945,
+  "final_zone": 2,
+  "zones": [
     {
-      "idx":1,
-      "dwell_ms":1000
+      "idx": 1,
+      "entered": 1,
+      "first_entry_ms": 0,
+      "dwell_ms": 1964
     },
     {
-      "idx":2,
-      "dwell_ms":3123
+      "idx": 2,
+      "entered": 1,
+      "first_entry_ms": 3927,
+      "dwell_ms": 981
+    },
+    {
+      "idx": 3,
+      "entered": 0,
+      "first_entry_ms": 0,
+      "dwell_ms": 0
     }
-  ]
+  ],
+  "conversionEvent": 0
 }
 ```
 
