@@ -24,15 +24,15 @@ Presence tracking and session analytics using the Texas Instruments MSPM0L1117 M
 - VL53L7CX
 
 ### Communication
-- UART JSON output
+- I2C Sensor<>MCU, MCU UART JSON output
 
 ## Zone Layout
 
 | Zone | Distance |
 |--------|--------|
-| Z1 | Near |
-| Z2 | Mid |
-| Z3 | Far |
+| Z1 | 0-0.75m |
+| Z2 | 0.75-1.5m |
+| Z3 | 1.5-2.2m |
 
 ## Session Output
 
@@ -70,7 +70,7 @@ VL53L7CX_ULD/
 
 ## Known Limitations
 
-- Performance depends on integration time and ranging frequency.
+- Performance depends on integration time and ranging frequency. Low power config: 3Hz,  40ms integration time, sys clk 4Mhz
 
 ## License
 
