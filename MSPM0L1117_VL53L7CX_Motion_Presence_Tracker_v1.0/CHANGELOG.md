@@ -6,7 +6,8 @@ Initial public release.
 
 Features:
 - VL53L7CX 4x4 ranging
-- Motion-gated detection
+- Frequency 2Hz
+- Motion-gated detection with motion indicator plugin
 - Blob extraction
 - Zone tracking
 - Session generation
