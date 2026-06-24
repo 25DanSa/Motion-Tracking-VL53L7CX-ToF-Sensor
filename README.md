@@ -120,8 +120,6 @@ targetConfigs/
 * Dwell time measurement
 * Occupancy monitoring
 * Motion tracking
-* Smart buildings
-
 ---
 
 ## License
