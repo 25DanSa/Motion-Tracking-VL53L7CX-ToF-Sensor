@@ -1,4 +1,4 @@
-# Code Walkthrough
+# # Software Architecture v1.0
 
 This document explains the main software components and functions used in the MSPM0L1117 + VL53L7CX Motion Presence Tracker firmware.
 
