@@ -1,0 +1,30 @@
+# CCS build output
+Debug/
+Release/
+
+# CCS settings
+.settings/
+
+# Temporary files
+*.o
+*.d
+*.obj
+*.out
+*.map
+
+# CCS generated files
+*_linkInfo.xml
+
+# Index/cache files
+.clangd/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.tmp
+
+# Optional
+*.log
