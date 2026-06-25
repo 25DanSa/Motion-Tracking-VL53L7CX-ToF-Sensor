@@ -14,7 +14,7 @@ Detected sessions are exported as JSON records over UART for further processing 
 
 ## Features
 
-* VL53L7CX 4x4 ranging mode
+* VL53L7CX 4x4 or 8x8 ranging mode
 * Motion-gated presence detection
 * Blob clustering
 * 3-zone tracking
