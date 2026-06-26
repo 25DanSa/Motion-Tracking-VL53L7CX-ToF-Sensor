@@ -99,17 +99,16 @@ docs/software_architecture.md
 # Build
 
 1. Install ESP32 Arduino Core.
-2. Install NimBLE-Arduino.
-3. Configure cloud parameters.
-4. Build.
-5. Flash.
-6. Provision WiFi through BLE.
+2. Configure cloud parameters.
+3. Compile.
+4. Flash.
+5. Provision WiFi through BLE.
 
 ---
 
 # WiFi Provisioning
 
-The Android application connects over BLE and sends CBOR encoded WiFi credentials.
+The Android application (Connect App) connects over BLE and sends CBOR encoded WiFi credentials.
 
 The firmware
 
