@@ -1,6 +1,6 @@
 # MSPM0L1117 + VL53L7CX Motion Presence Tracker — Baseline Learning v2.0
 
-Low-power presence detection, stationary object tracking and session analytics using the Texas Instruments MSPM0L1117 MCU and the ST VL53L7CX Time-of-Flight sensor.
+Motion presence detection, stationary object tracking and session analytics using the Texas Instruments MSPM0L1117 MCU and the ST VL53L7CX Time-of-Flight sensor.
 
 ---
 
@@ -57,8 +57,6 @@ Detailed documentation:
 * UART JSON output
 * UART time synchronization
 * Automatic software reboot
-* Low-power MSPM0 implementation
-
 ---
 
 # Processing Pipeline
@@ -222,7 +220,6 @@ Validated scenarios:
 * Presence detection
 * Dwell time measurement
 * Queue analytics
-* Smart buildings
 * Edge AI sensing
 * Embedded people tracking
 
