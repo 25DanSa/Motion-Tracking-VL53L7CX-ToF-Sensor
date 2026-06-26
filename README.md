@@ -39,21 +39,77 @@ All firmware versions provide:
 
 ---
 
-# Firmware Comparison
+## Firmware Comparison
 
-| Feature               | Motion Tracker v1.0     | Baseline Learning v2.0       |
-| --------------------- | ----------------------- | ---------------------------- |
-| Detection Method      | Motion Indicator        | Adaptive Background Learning |
-| Sensor Resolution     | 4×4                     | 8×8                          |
-| Background Model      | No                      | Adaptive Per-Pixel           |
-| Foreground Mask       | No                      | Yes                          |
-| Stationary Detection  | Good                    | Excellent                    |
-| Pass-by Detection     | Excellent               | Good                         |
-| Processing Complexity | Low                     | Medium                       |
-| Power Consumption     | Low                     | Higher                       |
-| Integration Time      | Short                   | Increased                    |
-| Ranging Frequency     | Reduced                 | Higher                   |
-| Intended Application  | Battery-powered devices | Highest detection accuracy   |
+The repository currently contains two firmware architectures optimized for different use cases.
+
+| Feature                     | Motion Presence Tracker v1.0             | Baseline Learning v2.0                        |
+| --------------------------- | ---------------------------------------- | --------------------------------------------- |
+| Primary Goal                | Low-power presence and pass-by detection | High-stability presence tracking              |
+| Detection Method            | Motion Indicator                         | Adaptive Background Learning                  |
+| Sensor Resolution           | 4×4                                      | 8×8                                           |
+| Background Model            | No                                       | Adaptive Per-Pixel                            |
+| Foreground Mask             | No                                       | Yes                                           |
+| Integration Time            | Default (~40 ms)                         | Increased (300 ms)                            |
+| Frame Rate                  | 2 Hz                                     | 3 Hz                                          |
+| Reliable Detection Range    | Up to ~2 m                               | Up to ~3 m                                    |
+| Lateral Pass-by Detection   | Excellent                                | Moderate                                      |
+| Stationary Person Detection | Good                                     | Excellent                                     |
+| Long-Dwell Tracking         | Good                                     | Excellent                                     |
+| Processing Complexity       | Low                                      | Higher                                        |
+| Power Consumption           | Low                                      | Higher                                        |
+| Intended Application        | Battery-powered sensors                  | Mains-powered or performance-oriented systems |
+
+### Motion Presence Tracker v1.0
+
+This firmware is optimized for **low-power operation** and is intended for battery-powered sensors.
+
+Characteristics:
+
+* Motion Indicator-based detection
+* 4×4 ranging mode
+* Default integration time (~40 ms)
+* 2 Hz frame rate
+* Reliable detection up to approximately 2 m
+* Excellent lateral pass-by detection
+* Low MCU workload
+* Optimized power consumption
+
+Typical applications:
+
+* Retail entrance monitoring
+* Pass-by counting
+* Battery-powered occupancy sensors
+* Fast-moving targets
+
+---
+
+### Baseline Learning v2.0
+
+This firmware is optimized for **maximum detection stability** and **longer detection range**.
+
+Instead of relying on the VL53L7CX Motion Indicator, it continuously learns the environment and detects foreground objects using an adaptive per-pixel background model.
+
+Characteristics:
+
+* Adaptive background learning
+* 8×8 ranging mode
+* Increased integration time (300 ms)
+* 3 Hz frame rate
+* Reliable detection up to approximately 3 m
+* Excellent stationary presence detection
+* Stable tracking of people remaining within the field of view
+* Higher computational load
+* Increased power consumption
+
+Typical applications:
+
+* Smart shelves
+* Customer dwell-time analytics
+* Queue monitoring
+* People approaching products
+* Long-duration occupancy monitoring
+
 
 ---
 
@@ -80,7 +136,7 @@ All firmware versions provide:
 | ---- | ---------------- |
 | Z1   | 0.0 m – 0.75 m   |
 | Z2   | 0.75 m – 1.50 m  |
-| Z3   | 1.50 m – 2.20 m* |
+| Z3   | 1.50 m – 3.00 m* |
 
 *Maximum reliable detection distance depends on firmware configuration, integration time and ranging frequency.
 
@@ -173,8 +229,6 @@ Each firmware version contains its own documentation:
 # Roadmap
 
 Planned future firmware generations include:
-
-* Improved pass-by detection
 * Multi-person tracking
 * Dynamic parameter configuration
 * Enhanced analytics
