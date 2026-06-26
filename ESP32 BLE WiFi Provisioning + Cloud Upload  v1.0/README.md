@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project implements a prototype-oriented ESP32 firmware for battery-powered sensing devices.
+This project implements a prototype-oriented ESP32 firmware for ToF sensor devices.
 
 The firmware combines:
 
