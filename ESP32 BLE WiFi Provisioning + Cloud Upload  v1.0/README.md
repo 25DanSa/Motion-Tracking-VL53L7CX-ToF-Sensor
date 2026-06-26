@@ -53,7 +53,7 @@ Communication
 
 BLE
 
-* NimBLE-Arduino
+* NimBLE
 
 Cloud
 
