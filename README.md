@@ -50,7 +50,7 @@ The repository currently contains two firmware architectures optimized for diffe
 | Sensor Resolution           | 4×4                                      | 8×8                                           |
 | Background Model            | No                                       | Adaptive Per-Pixel                            |
 | Foreground Mask             | No                                       | Yes                                           |
-| Integration Time            | Default (~40 ms)                         | Increased (300 ms)                            |
+| Integration Time            | Default (~20 ms)                         | Increased (300 ms)                            |
 | Frame Rate                  | 2 Hz                                     | 3 Hz                                          |
 | Reliable Detection Range    | Up to ~2 m                               | Up to ~3 m                                    |
 | Lateral Pass-by Detection   | Excellent                                | Moderate                                      |
@@ -68,7 +68,7 @@ Characteristics:
 
 * Motion Indicator-based detection
 * 4×4 ranging mode
-* Default integration time (~40 ms)
+* Default integration time (~20 ms)
 * 2 Hz frame rate
 * Reliable detection up to approximately 2 m
 * Excellent lateral pass-by detection
